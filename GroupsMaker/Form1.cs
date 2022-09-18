@@ -79,10 +79,9 @@ namespace GroupsMaker
 
         internal void clear()
         {
-            popsicleStickPulled.Visible = false;
-            buddyview.Visible = false;
-            header1.Visible = false;
-            header2.Visible = false;
+            popLayoutPanel.Visible = false;
+
+            buddyLayoutPanel.Visible = false;
         }
 
         private void clearBtn_Click(object sender, EventArgs e)
@@ -160,6 +159,39 @@ namespace GroupsMaker
             header2.Load(Application.StartupPath + "\\eggs.png");
             buddyview.Columns[0].HeaderText = "Bacon";
             buddyview.Columns[1].HeaderText = "Eggs";
+        }
+
+        private void makeAlwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(makeAlwaysOnTopToolStripMenuItem.Text=="Make Always On Top")
+            {
+                Form.ActiveForm.TopMost = true;
+                makeAlwaysOnTopToolStripMenuItem.Text = "Make Not Always On Top";
+            } else
+            {
+                makeAlwaysOnTopToolStripMenuItem.Text = "Make Always On Top";
+                Form.ActiveForm.TopMost = false;
+            }
+        }
+
+        private void hideStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(hideStudentsToolStripMenuItem.Text=="Hide Students")
+            {
+                hideStudentsToolStripMenuItem.Text = "Show Students";
+                this.Width = this.Width - 300;
+            } else
+            {
+                hideStudentsToolStripMenuItem.Text = "Hide Students";
+                this.Width = this.Width + 300;
+            }
+
+            studentLayoutPanel.Visible = !studentLayoutPanel.Visible;
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -31,8 +31,8 @@ namespace GroupsMaker
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,10 +69,24 @@ namespace GroupsMaker
             this.chipsAndSalsaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frybreadAndStewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baconAndEggsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideDisplayAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeAlwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.studentLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolBtnPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.buddyLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.popLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buddyview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.header1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.header2)).BeginInit();
+            this.studentLayoutPanel.SuspendLayout();
+            this.toolBtnPanel.SuspendLayout();
+            this.buddyLayoutPanel.SuspendLayout();
+            this.popLayoutPanel.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -80,7 +94,8 @@ namespace GroupsMaker
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentsToolStripMenuItem,
             this.popsicleSticksToolStripMenuItem,
-            this.buddyTalkToolStripMenuItem});
+            this.buddyTalkToolStripMenuItem,
+            this.windowViewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1484, 24);
@@ -132,9 +147,10 @@ namespace GroupsMaker
             // 
             // presentStudentsLabel
             // 
+            this.presentStudentsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.presentStudentsLabel.AutoSize = true;
             this.presentStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.presentStudentsLabel.Location = new System.Drawing.Point(4, 115);
+            this.presentStudentsLabel.Location = new System.Drawing.Point(3, 0);
             this.presentStudentsLabel.Name = "presentStudentsLabel";
             this.presentStudentsLabel.Size = new System.Drawing.Size(104, 13);
             this.presentStudentsLabel.TabIndex = 1;
@@ -142,8 +158,9 @@ namespace GroupsMaker
             // 
             // presentStudents
             // 
+            this.presentStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.presentStudents.FormattingEnabled = true;
-            this.presentStudents.Location = new System.Drawing.Point(7, 131);
+            this.presentStudents.Location = new System.Drawing.Point(3, 16);
             this.presentStudents.Name = "presentStudents";
             this.presentStudents.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.presentStudents.Size = new System.Drawing.Size(130, 368);
@@ -152,7 +169,7 @@ namespace GroupsMaker
             // 
             // markAllAbsentBtn
             // 
-            this.markAllAbsentBtn.Location = new System.Drawing.Point(7, 505);
+            this.markAllAbsentBtn.Location = new System.Drawing.Point(3, 419);
             this.markAllAbsentBtn.Name = "markAllAbsentBtn";
             this.markAllAbsentBtn.Size = new System.Drawing.Size(107, 23);
             this.markAllAbsentBtn.TabIndex = 3;
@@ -162,7 +179,8 @@ namespace GroupsMaker
             // 
             // markSelAbsentBtn
             // 
-            this.markSelAbsentBtn.Location = new System.Drawing.Point(7, 534);
+            this.markSelAbsentBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.markSelAbsentBtn.Location = new System.Drawing.Point(3, 390);
             this.markSelAbsentBtn.Name = "markSelAbsentBtn";
             this.markSelAbsentBtn.Size = new System.Drawing.Size(130, 23);
             this.markSelAbsentBtn.TabIndex = 4;
@@ -173,7 +191,7 @@ namespace GroupsMaker
             // absentStudents
             // 
             this.absentStudents.FormattingEnabled = true;
-            this.absentStudents.Location = new System.Drawing.Point(7, 622);
+            this.absentStudents.Location = new System.Drawing.Point(3, 501);
             this.absentStudents.Name = "absentStudents";
             this.absentStudents.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.absentStudents.Size = new System.Drawing.Size(130, 69);
@@ -184,7 +202,8 @@ namespace GroupsMaker
             // 
             this.absentStudentsLabel.AutoSize = true;
             this.absentStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.absentStudentsLabel.Location = new System.Drawing.Point(4, 596);
+            this.absentStudentsLabel.Location = new System.Drawing.Point(3, 485);
+            this.absentStudentsLabel.Margin = new System.Windows.Forms.Padding(3, 40, 3, 0);
             this.absentStudentsLabel.Name = "absentStudentsLabel";
             this.absentStudentsLabel.Size = new System.Drawing.Size(112, 13);
             this.absentStudentsLabel.TabIndex = 6;
@@ -192,7 +211,7 @@ namespace GroupsMaker
             // 
             // markAllPresentBtn
             // 
-            this.markAllPresentBtn.Location = new System.Drawing.Point(7, 697);
+            this.markAllPresentBtn.Location = new System.Drawing.Point(3, 576);
             this.markAllPresentBtn.Name = "markAllPresentBtn";
             this.markAllPresentBtn.Size = new System.Drawing.Size(120, 23);
             this.markAllPresentBtn.TabIndex = 7;
@@ -202,7 +221,7 @@ namespace GroupsMaker
             // 
             // markSelPresentBtn
             // 
-            this.markSelPresentBtn.Location = new System.Drawing.Point(7, 726);
+            this.markSelPresentBtn.Location = new System.Drawing.Point(3, 605);
             this.markSelPresentBtn.Name = "markSelPresentBtn";
             this.markSelPresentBtn.Size = new System.Drawing.Size(135, 23);
             this.markSelPresentBtn.TabIndex = 8;
@@ -216,7 +235,7 @@ namespace GroupsMaker
             this.popsicleBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.popsicleBtn.FlatAppearance.BorderSize = 3;
             this.popsicleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.popsicleBtn.Location = new System.Drawing.Point(28, 27);
+            this.popsicleBtn.Location = new System.Drawing.Point(3, 3);
             this.popsicleBtn.Name = "popsicleBtn";
             this.popsicleBtn.Size = new System.Drawing.Size(80, 80);
             this.popsicleBtn.TabIndex = 0;
@@ -235,18 +254,16 @@ namespace GroupsMaker
             // 
             // popsicleStickPulled
             // 
-            this.popsicleStickPulled.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.popsicleStickPulled.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.popsicleStickPulled.BackColor = System.Drawing.Color.Transparent;
             this.popsicleStickPulled.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popsicleStickPulled.Image = ((System.Drawing.Image)(resources.GetObject("popsicleStickPulled.Image")));
-            this.popsicleStickPulled.Location = new System.Drawing.Point(208, 292);
+            this.popsicleStickPulled.Location = new System.Drawing.Point(3, 0);
             this.popsicleStickPulled.Name = "popsicleStickPulled";
-            this.popsicleStickPulled.Size = new System.Drawing.Size(803, 207);
+            this.popsicleStickPulled.Size = new System.Drawing.Size(848, 150);
             this.popsicleStickPulled.TabIndex = 11;
             this.popsicleStickPulled.Text = "Student";
             this.popsicleStickPulled.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.popsicleStickPulled.Visible = false;
             // 
             // button1
             // 
@@ -254,7 +271,7 @@ namespace GroupsMaker
             this.button1.FlatAppearance.BorderSize = 3;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(139, 27);
+            this.button1.Location = new System.Drawing.Point(89, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 80);
             this.button1.TabIndex = 12;
@@ -268,7 +285,7 @@ namespace GroupsMaker
             this.button2.FlatAppearance.BorderSize = 3;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(239, 27);
+            this.button2.Location = new System.Drawing.Point(175, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 80);
             this.button2.TabIndex = 13;
@@ -281,7 +298,7 @@ namespace GroupsMaker
             this.clearBtn.FlatAppearance.BorderSize = 3;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.clearBtn.Image = ((System.Drawing.Image)(resources.GetObject("clearBtn.Image")));
-            this.clearBtn.Location = new System.Drawing.Point(339, 27);
+            this.clearBtn.Location = new System.Drawing.Point(261, 3);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(80, 80);
             this.clearBtn.TabIndex = 14;
@@ -314,28 +331,27 @@ namespace GroupsMaker
             // 
             // buddyview
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.buddyview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.buddyview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.buddyview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.buddyview.DefaultCellStyle = dataGridViewCellStyle14;
-            this.buddyview.Location = new System.Drawing.Point(202, 231);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.buddyview.DefaultCellStyle = dataGridViewCellStyle8;
+            this.buddyview.Location = new System.Drawing.Point(3, 99);
             this.buddyview.Name = "buddyview";
-            this.buddyview.Size = new System.Drawing.Size(816, 541);
+            this.buddyview.Size = new System.Drawing.Size(833, 519);
             this.buddyview.TabIndex = 15;
-            this.buddyview.Visible = false;
             // 
             // buddyTalkToolStripMenuItem
             // 
@@ -357,22 +373,22 @@ namespace GroupsMaker
             // header1
             // 
             this.header1.Image = ((System.Drawing.Image)(resources.GetObject("header1.Image")));
-            this.header1.Location = new System.Drawing.Point(319, 131);
+            this.header1.Location = new System.Drawing.Point(150, 3);
+            this.header1.Margin = new System.Windows.Forms.Padding(150, 3, 100, 3);
             this.header1.Name = "header1";
             this.header1.Size = new System.Drawing.Size(90, 90);
             this.header1.TabIndex = 16;
             this.header1.TabStop = false;
-            this.header1.Visible = false;
             // 
             // header2
             // 
             this.header2.Image = ((System.Drawing.Image)(resources.GetObject("header2.Image")));
-            this.header2.Location = new System.Drawing.Point(776, 131);
+            this.header2.Location = new System.Drawing.Point(540, 3);
+            this.header2.Margin = new System.Windows.Forms.Padding(200, 3, 100, 3);
             this.header2.Name = "header2";
             this.header2.Size = new System.Drawing.Size(90, 90);
             this.header2.TabIndex = 17;
             this.header2.TabStop = false;
-            this.header2.Visible = false;
             // 
             // changeHeadersToolStripMenuItem
             // 
@@ -413,29 +429,110 @@ namespace GroupsMaker
             this.baconAndEggsToolStripMenuItem.Text = "&Bacon and Eggs";
             this.baconAndEggsToolStripMenuItem.Click += new System.EventHandler(this.baconAndEggsToolStripMenuItem_Click);
             // 
+            // windowViewToolStripMenuItem
+            // 
+            this.windowViewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.makeAlwaysOnTopToolStripMenuItem,
+            this.hideStudentsToolStripMenuItem,
+            this.hideDisplayAreaToolStripMenuItem});
+            this.windowViewToolStripMenuItem.Name = "windowViewToolStripMenuItem";
+            this.windowViewToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.windowViewToolStripMenuItem.Text = "Window View";
+            // 
+            // hideStudentsToolStripMenuItem
+            // 
+            this.hideStudentsToolStripMenuItem.Name = "hideStudentsToolStripMenuItem";
+            this.hideStudentsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.hideStudentsToolStripMenuItem.Text = "Hide Students";
+            this.hideStudentsToolStripMenuItem.Click += new System.EventHandler(this.hideStudentsToolStripMenuItem_Click);
+            // 
+            // hideDisplayAreaToolStripMenuItem
+            // 
+            this.hideDisplayAreaToolStripMenuItem.Name = "hideDisplayAreaToolStripMenuItem";
+            this.hideDisplayAreaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.hideDisplayAreaToolStripMenuItem.Text = "Hide Display Area";
+            // 
+            // makeAlwaysOnTopToolStripMenuItem
+            // 
+            this.makeAlwaysOnTopToolStripMenuItem.Name = "makeAlwaysOnTopToolStripMenuItem";
+            this.makeAlwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.makeAlwaysOnTopToolStripMenuItem.Text = "Make Always On Top";
+            this.makeAlwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.makeAlwaysOnTopToolStripMenuItem_Click);
+            // 
+            // studentLayoutPanel
+            // 
+            this.studentLayoutPanel.Controls.Add(this.presentStudentsLabel);
+            this.studentLayoutPanel.Controls.Add(this.presentStudents);
+            this.studentLayoutPanel.Controls.Add(this.markSelAbsentBtn);
+            this.studentLayoutPanel.Controls.Add(this.markAllAbsentBtn);
+            this.studentLayoutPanel.Controls.Add(this.absentStudentsLabel);
+            this.studentLayoutPanel.Controls.Add(this.absentStudents);
+            this.studentLayoutPanel.Controls.Add(this.markAllPresentBtn);
+            this.studentLayoutPanel.Controls.Add(this.markSelPresentBtn);
+            this.studentLayoutPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.studentLayoutPanel.Location = new System.Drawing.Point(0, 110);
+            this.studentLayoutPanel.Name = "studentLayoutPanel";
+            this.studentLayoutPanel.Size = new System.Drawing.Size(179, 677);
+            this.studentLayoutPanel.TabIndex = 18;
+            // 
+            // toolBtnPanel
+            // 
+            this.toolBtnPanel.Controls.Add(this.popsicleBtn);
+            this.toolBtnPanel.Controls.Add(this.button1);
+            this.toolBtnPanel.Controls.Add(this.button2);
+            this.toolBtnPanel.Controls.Add(this.clearBtn);
+            this.toolBtnPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toolBtnPanel.Location = new System.Drawing.Point(0, 13);
+            this.toolBtnPanel.Name = "toolBtnPanel";
+            this.toolBtnPanel.Size = new System.Drawing.Size(1367, 97);
+            this.toolBtnPanel.TabIndex = 19;
+            // 
+            // buddyLayoutPanel
+            // 
+            this.buddyLayoutPanel.Controls.Add(this.header1);
+            this.buddyLayoutPanel.Controls.Add(this.header2);
+            this.buddyLayoutPanel.Controls.Add(this.buddyview);
+            this.buddyLayoutPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buddyLayoutPanel.Location = new System.Drawing.Point(179, 110);
+            this.buddyLayoutPanel.Name = "buddyLayoutPanel";
+            this.buddyLayoutPanel.Size = new System.Drawing.Size(883, 677);
+            this.buddyLayoutPanel.TabIndex = 20;
+            this.buddyLayoutPanel.Visible = false;
+            this.buddyLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // popLayoutPanel
+            // 
+            this.popLayoutPanel.Controls.Add(this.popsicleStickPulled);
+            this.popLayoutPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.popLayoutPanel.Location = new System.Drawing.Point(1062, 110);
+            this.popLayoutPanel.Name = "popLayoutPanel";
+            this.popLayoutPanel.Size = new System.Drawing.Size(863, 677);
+            this.popLayoutPanel.TabIndex = 21;
+            this.popLayoutPanel.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.popLayoutPanel);
+            this.groupBox1.Controls.Add(this.buddyLayoutPanel);
+            this.groupBox1.Controls.Add(this.studentLayoutPanel);
+            this.groupBox1.Controls.Add(this.toolBtnPanel);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 24);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox1.Size = new System.Drawing.Size(1367, 787);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1484, 811);
-            this.Controls.Add(this.header2);
-            this.Controls.Add(this.header1);
-            this.Controls.Add(this.buddyview);
-            this.Controls.Add(this.clearBtn);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.popsicleStickPulled);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.popsicleBtn);
-            this.Controls.Add(this.markSelPresentBtn);
-            this.Controls.Add(this.markAllPresentBtn);
-            this.Controls.Add(this.absentStudentsLabel);
-            this.Controls.Add(this.absentStudents);
-            this.Controls.Add(this.markSelAbsentBtn);
-            this.Controls.Add(this.markAllAbsentBtn);
-            this.Controls.Add(this.presentStudents);
-            this.Controls.Add(this.presentStudentsLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -447,6 +544,12 @@ namespace GroupsMaker
             ((System.ComponentModel.ISupportInitialize)(this.buddyview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.header1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.header2)).EndInit();
+            this.studentLayoutPanel.ResumeLayout(false);
+            this.studentLayoutPanel.PerformLayout();
+            this.toolBtnPanel.ResumeLayout(false);
+            this.buddyLayoutPanel.ResumeLayout(false);
+            this.popLayoutPanel.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,6 +593,15 @@ namespace GroupsMaker
         private System.Windows.Forms.ToolStripMenuItem chipsAndSalsaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem frybreadAndStewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baconAndEggsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem windowViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem makeAlwaysOnTopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hideStudentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hideDisplayAreaToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel toolBtnPanel;
+        internal System.Windows.Forms.FlowLayoutPanel buddyLayoutPanel;
+        internal System.Windows.Forms.FlowLayoutPanel studentLayoutPanel;
+        internal System.Windows.Forms.FlowLayoutPanel popLayoutPanel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

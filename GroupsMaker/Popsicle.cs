@@ -64,7 +64,7 @@ namespace GroupsMaker
             {
                 this.form.popsicleStickPulled.Text = "No students available";
             }
-            this.form.popsicleStickPulled.Visible = true;
+            this.form.popLayoutPanel.Visible = true;
             this.form.popsicleStickPulled.BackColor = Color.Transparent;
             this.form.popsicleStickPulled.Size = new Size(850, 150);
         }

@@ -29,6 +29,7 @@ namespace GroupsMaker
 
         public void showBuddies()
         {
+            form.clear();
             List<Student> available = students.getPresentStudents();
             if (available.Count() > 1) {
                 available = students.shuffleList(available);
@@ -48,9 +49,7 @@ namespace GroupsMaker
                 }
                 source.DataSource = list;
                 form.buddyview.DataSource = source;
-                form.buddyview.Visible = true;
-                form.header1.Visible = true;
-                form.header2.Visible = true;
+                form.buddyLayoutPanel.Visible = true;
                 form.buddyview.Columns[0].HeaderText = "Peanut Butter";
                 form.buddyview.Columns[1].HeaderText = "Jelly";
                 form.buddyview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
